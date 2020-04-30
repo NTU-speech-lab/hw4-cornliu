@@ -1,0 +1,1 @@
+python3 code/hw4_train.py $1 $2
