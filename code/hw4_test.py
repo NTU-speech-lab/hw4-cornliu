@@ -326,5 +326,6 @@ outputs = testing(batch_size, test_loader, model, device)
 # 寫到 csv 檔案供上傳 Kaggle
 tmp = pd.DataFrame({"id":[str(i) for i in range(len(test_x))],"label":outputs})
 print("save csv ...")
-tmp.to_csv(os.path.join(path_prefix, 'predict.csv'), index=False)
+tmp.to_csv(sys.argv[2], index=False)
 print("Finish Predicting")
+
